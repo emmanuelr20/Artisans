@@ -1,0 +1,389 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing:border-box;
+}
+body{
+	height: 100%;
+	width: 100%;
+	font-family: 'Nunito';
+}
+.navbar.navbar-default.navbar-fixed-top{
+	background-color: #428b46;
+	border: 1px solid #428b46;
+	height: 70px;
+}
+.container{
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+.container a.navbar-brand{
+	font-family: 'Eurostile';
+	font-size: 36px;
+	color: #fff;	
+}
+.container a.navbar-brand:hover{
+	font-family: 'Eurostile';
+	font-size: 36px;
+	color: #fff;
+}
+.nav.navbar-nav{
+	background-color: #428b46;
+}
+.navbar-default .navbar-nav li a{
+	font-size: 22px;
+	color: white;
+	font-family: 'Eurostile';
+}
+ul.nav.navbar-nav.navbar-right li a.home-link{
+	color: #fff;
+}
+li.dropdown a.dropdown-toggle{
+	color: #fff;
+	background: #428b46;
+}
+.navbar-default .navbar-nav li a.home-link{
+	padding-top: 15px;
+}
+li.dropdown{
+	color: #fff;
+}
+li.dropdown a.dropdown-toggle{
+	color: #fff;
+	background: #428b46;
+}
+ul.dropdown-menu{
+	background: #428b46;
+}
+
+/*End navbar css*/
+.container.profile{
+	margin-top: 5em;
+}
+.profile_wrapper{
+	height: 500px;
+}
+/* col- md-3*/
+.profile_details{
+	height: 1100px;
+	margin-bottom: 8em;
+}
+.profile_shot{
+	text-align: center;
+	width: 238px;
+	border:2px solid grey;
+	height: 178px;
+	margin-top: 2em;
+	margin-left: -6.5em;
+}
+.profile_shot img{
+	float: right;
+	border: 1px solid #fff;
+	width: 232px;
+	height: 174px;
+	margin-right: ;
+	margin-left: 0.5em;
+}
+.dino_details{
+	border:2px solid #e8e8e8;
+	width: 264px;
+	margin: auto;
+	margin-top: -21em;
+	margin-right: 0.7em;
+	margin-left: -7.5em;
+	border-left:none;
+}
+.dino_details li{
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+.dino_details li.first{
+	margin-top: 2em;
+}
+.dino_details li.bottom{
+	margin-bottom: 2em;
+}
+.dino_details a{
+	color: grey;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding-left:30px;
+	margin-bottom: 10px;
+}
+.dino_details a:hover{
+	text-decoration: none;
+	color: #428b46;
+
+}
+/* end of col-md-3*/
+
+/*profile Description css*/
+button.edit{
+	display: inline-block;
+	float: right;
+	width: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #428b46;
+	background: #fff;
+	border-width: 0px;
+	border: 1px solid #428b46;
+	border-radius: 3px;
+	margin-top: -1.8em;
+	margin-right: 8em;
+}
+
+p.det_title{
+	color:gray;
+	font-size: 15px;
+	margin-top: 2em;
+	font-weight: bold;
+	margin-left: 0.5em;
+	margin-bottom: -0.5em;
+}
+.hr{
+	width: 85%;
+}
+p.h-name{
+	color: gray;
+	font-size: 15px;
+	margin-left: 0.5em;
+	font-weight: bold;
+}
+p.dino-name{
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 0.5em;
+	margin-bottom: 2em;
+}
+.D-O-B{
+	display: inline-block;
+}
+.gender{
+	display: inline-block;
+	margin-left: 3em;
+}
+p.date{
+	color: gray;
+	font-size: 15px;
+	margin-left: 0.5em;
+	font-weight: bold;
+}
+p.dates{
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 0.5em;
+	margin-bottom: 2em;
+}
+.gend{
+	color: gray;
+	font-size: 15px;
+	margin-left: 6em;
+	font-weight: bold;
+}
+.gende{
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 5.5em;
+	margin-bottom: 2em;
+}
+/*end of personal info css*/
+.acct-header{
+	color: gray;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.1px;
+	line-height: 20px;
+	display: inline-block;
+	margin-left: 0.5em;
+}
+button.password{
+	display: inline-block;
+	float: right;
+	width: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #428b46;
+	background: #fff;
+	border-width: 0px;
+	border: 1px solid #428b46;
+	border-radius: 3px;
+	margin-right: 8em;
+}
+p.email-title, .h-address {
+	color: gray;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.1px;
+	line-height: 20px;
+	margin-left: 0.5em;
+}
+p.email, .addresss {
+	color: #333;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 2em;
+	margin-left: 0.5em;
+}
+/*contact informatin css1*/
+p.c-details{
+	color: gray;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.1px;
+	line-height: 20px;
+	display: inline-block;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: -5em;
+	margin-left: 0.5em;
+}
+
+button.contact-edit{
+	display: inline-block;
+	float: right;
+	width: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #428b46;
+	background: #fff;
+	border-width: 0px;
+	border: 1px solid #428b46;
+	border-radius: 3px;
+	margin-right: 8em;
+}
+.location{
+	display: inline-block;
+	color: gray;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.1px;
+	line-height: 20px;
+	margin-right: 7em;
+	margin-left: 0.5em;
+}
+.city-location{
+	display: inline-block;
+	color: gray;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.1px;
+	line-height: 20px;
+
+}
+.location-value{
+	color: #333;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 2em;
+	display: inline-block;
+	margin-right: 5em;
+	margin-left: 0.5em;
+}
+.city-value{
+	display: inline-block;
+	color: #333;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 2em;
+
+}
+/*phone styling css*/
+.phone-num,  .card-numb{
+	color: gray;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.1px;
+	line-height: 20px;
+	margin-left: 0.5em;
+}
+.phone-Numb, .card_number{
+	color: #333;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 2em;
+	display: inline-block;
+	margin-right: 6em;
+	margin-left: 0.5em;
+}
+.card-header{
+	margin-bottom:-0.5em;
+	color: gray;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.1px;
+	line-height: 20px;
+	margin-left: 0.5em;
+}
+button.phone-verify{
+	display: inline-block;
+	width: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #428b46;
+	background: #fff;
+	border-width: 0px;
+	border: 1px solid #428b46;
+	border-radius: 3px;
+}
+ .expire, .cvv{
+ 	color: gray;
+ 	font-size: 15px;
+ 	margin-right: 5em;
+ 	display: inline-block;
+ 	font-weight: bold;
+ 	margin-left: 0.5em;
+ }
+ .expire-date, .cvv-numb{
+ 	color: #333;
+ 	font-size: 18px;
+ 	font-weight: bold;
+ 	display: inline-block;
+ 	margin-right: 6.5em;
+ 	margin-left: 0.5em;
+ }
+ /* current jobs styling*/
+ .current-jobs h3{
+ 	text-align: center;
+ }
+ .current-job-dets h3{
+ 	text-align: left;
+ }
+ .current-job-dets{
+ 	border:1px solid gray;
+ 	padding-left: 10px;
+ 	padding-bottom: 20px;
+ 	margin-bottom: 10px;
+ }
+ .current-job-dets p{
+ 	font-size: 16px;
+ 	color: gray;
+ 	padding-bottom: 10px;
+ }
+
+
+ /*footer styling*/
+ .footer-wrapper{
+ 	background: #428b46;
+ 	margin-bottom: -2em;
+ 	margin-top: 2em;
+ }
+ .navbar.navbar-default.footer{
+ 	background: #428b46;
+ 	margin-bottom: -2em;
+ 	margin-right: -15px;
+ 	margin-left: -15px;
+ 	font-size: 15px;
+ }
+a.navbar-brand.footer{
+	font-size: 16px;
+	font-family: 'Nunito';
+	margin-left: -8em;
+}
+ul.nav.navbar-nav.navbar-right.footer li a{
+	font-size: 14px;
+}

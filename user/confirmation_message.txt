@@ -1,0 +1,8 @@
+<h2>Hi welcome to Artisans</h2>
+
+To complete your registration process please click on the link below to activate your account
+
+{{{}}}
+
+Thank you.
+<h4>Artisans<h4>

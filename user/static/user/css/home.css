@@ -1,0 +1,62 @@
+.main-home{
+    margin-top: -50px;
+    background-image:url('../img/feat-welding.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 700px;
+}
+footer{
+    margin-top: -50px;
+    opacity: 0.85;
+}
+.navbar.navbar-default.navbar-fixed-top{
+    opacity: 0.85;
+}
+.home-content{
+    padding-top: 200px;
+    text-align: center;
+    
+}
+.home-content h1{
+    font-size: 150px;
+    color: white;
+}
+
+.buttons .btn1{
+	padding: 10px;
+	font-size: 18px;
+	font-family: 'Nunito';
+	background-color: #fff;
+	color: #428b46;
+	margin-right: 60px;
+	width: 400px;
+	border-radius: 15px;
+	border-color: #fff;
+	box-shadow: 0px;
+	line-height: 30px;
+	text-align: center;	
+	letter-spacing: 0.5px;
+	border-width: 0px;
+}
+.buttons .btn1:hover{
+	background: #428b46;
+	color: #fff;
+}
+.buttons .btn2:hover{
+	background: #fff;
+	color: #428b46;
+}
+.buttons .btn2{
+	width: 400px;
+	background-color: #428b46;
+	color: #fff;
+	padding: 10px;
+	border-radius: 15px;
+    font-family: 'Nunito';
+	font-size: 18px;
+	box-shadow: 0px;
+	line-height: 30px;
+	text-align: center;	
+	letter-spacing: 0.5px;
+	border-width: 0px;
+}

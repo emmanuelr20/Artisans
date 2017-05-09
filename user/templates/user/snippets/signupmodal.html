@@ -1,0 +1,26 @@
+{% load crispy_forms_tags %}
+<!-- Sign up modal -->
+<div class="modal fade" id="popUpSignup">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					&times;
+				</button>
+				<button class="fb_button">
+					<span class="fa fa-facebook"></span>Sign up with Facebook
+				</button>	
+			</div>
+			<div class="modal-body">
+				{% if link_slug %} <form role="form" method="post" action="{% url 'user:register_branch' slug=link_slug %}">{% else %}
+				<form role="form" method="post" action="{% url 'user:register' %}">{% endif %}
+                    {% csrf_token %}
+					{{ sign_up_form|crispy }}
+					<div class="form-group">
+						<button type = "submit" class="btn btn-primary pass btn-block">Continue</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

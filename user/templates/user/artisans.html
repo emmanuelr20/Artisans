@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extralinks %}
+   <link rel="stylesheet" href="{% static 'user/css/artisans_view.css' %}">
+{% endblock extralinks %}
+
+{% block body %}
+
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="{% url 'user:artisans' query_type='all' %}"> All</a> </li>
+        <li role="presentation"><a href="{% url 'user:artisans' query_type='electricians' %}">Electricians</a> </li>
+        <li role="presentation"><a href="{% url 'user:artisans' query_type='carpenters' %}">Carpenters</a> </li>
+        <li role="presentation"><a href="{% url 'user:artisans' query_type='plumbers' %}">Plumbers</a> </li>
+        <li role="presentation"><a href="{% url 'user:artisans' query_type='cleaners' %}">Cleaners</a> </li>
+        <li role="presentation"><a href="{% url 'user:artisans' query_type='gardners' %}">Gardners</a> </li>
+    </ul>
+</div>
+
+{% for obj in artisans %}
+<div class="col-sm-3">
+    <div class="thumbnail">
+        {% if obj.profile_picture %}
+         <img src='{{ obj.profile_picture.url }}' class='img-responsive pic' />
+        {% endif %}
+      <div class="caption">
+        <h4><a href='{{ obj.get_absolute_url }}'><small>Name: </small>{{ obj.user.get_full_name|upper }}</a></h4>
+        <p>Rating: {{ obj.rating.overall_rating }}</p>
+        <p><a href="{{ obj.get_absolute_url }}" class="btn btn-primary" role="button">View</a></p>
+      </div>
+    </div>
+</div>
+{% endfor %}
+<div class="prefooter"></div>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if artisans.has_previous %}
+            <a href="?{{ page_request_var }}={{ artisans.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ artisans.number }} of {{ artisans.paginator.num_pages }}.
+        </span>
+
+        {% if artisans.has_next %}
+            <a href="?{{ page_request_var }}={{ artisans.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock body %}

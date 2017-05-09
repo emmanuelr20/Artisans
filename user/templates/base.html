@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Artisans | {%block title %}Home{% endblock title %}</title>
+		<link rel="stylesheet" href="{% static 'user/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'user/css/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'user/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'user/css/font-awesome.css' %}">
+		<link rel="stylesheet" href="{% static 'user/css/custom.css' %}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="{% static 'user/js/bootstrap.min.js' %}"></script>
+        {% block extralinks %}<link rel="stylesheet" href="{% static 'user/css/home.css' %}">{% endblock extralinks %}
+		<!-- Bootstrap CSS 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		-->
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body> 
+<!--    <div class="container-fluid">-->
+<!--        <div class="nav_wrapper">-->
+            <!-- Navbar -->
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <a class="navbar-brand" href="{% url 'index' %}">Artisans</a>
+                        <ul class="nav navbar-nav navbar-right">
+                            {% if not request.user.is_authenticated %}
+                                <li>
+                                    <a href="#" class="" data-toggle="modal" data-target="#popUpSignup">Sign Up  <span class="glyphicon glyphicon-user"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="" data-toggle="modal" data-target="#popUpLogin">Log In  <span class="glyphicon glyphicon-log-in"></span></a>
+                                </li>
+                            {% else %}
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ user.username }}
+                                    <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="{% url 'user:profile' %}">Profile</a></li>
+                                      <li><a href="{% url 'user:logout' %}">Logout</a></li>
+                                    </ul>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </nav>
+<!--            </div>-->
+        <!-- Sign up modal -->
+            {% include 'user/snippets/signupmodal.html' %}
+        <!-- log in modal -->
+            {% include 'user/snippets/loginmodal.html' %}
+        <!-- end of navbar and modal sign up and login -->			
+<!--    </div>-->
+    <!-- end of navbar -->
+    <div class="main-home">
+    {% block body %}
+        <div class="home-content">
+            <div class="center_heading">
+                <h1>Artisans</h1>
+            </div>
+            <div class="buttons">
+                <a href="#" class="" data-toggle="modal" data-target="#popUpSignup">
+                    <button class="btn1">Artisan? Get started</button>
+                </a>
+                <a href="http://127.0.0.1:8000/user/artisans/all">
+                    <button class="btn2">Need a service? Get started</button>
+                </a>
+            </div>
+        </div>   
+    {% endblock body %}
+    </div>
+    <footer><strong>Contact us on: </strong>Tel: 0809000000821, email: info@artisans.com<br>Artisans | 2017</footer>
+    </body>

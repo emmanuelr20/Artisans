@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}profile{% endblock title %}
+{% block extralinks %}<link rel="stylesheet" href="{% static 'user/css/userprofile.css' %}">{% endblock extralinks %}
+{% block body %}
+    <div class="container profile">
+			<div class="row">
+				<div class="col-md-3 col-sm-3">
+					<div class="profile_wrapper">
+						<div class="profile_shot">
+							<img src="{{ user.useraccount.profile_picture.url }}">
+						</div>
+					</div>
+					<div class="dino_details">
+						<ul class="det_sidebar">
+							<li class="first">
+								<a href="#">Personal Details</a>
+							</li>
+							<li>
+								<a href="#">Account Information</a>
+							</li>
+							<li>
+								<a href="#">Contact Details</a>
+							</li>
+							<li>
+								<a href="#">Card Details</a>
+							</li>
+							<li class="bottom">
+								<a href="#jobs">Current Jobs</a>
+							</li>
+						</ul>
+						
+					</div>
+				</div>
+				<div class="col-md-9 col-sm-9">
+					<div class="profile_details">
+						<div class="col-md-12">
+							<div class="personal_edit">
+								<p class="det_title">Personal Details</p>
+								<button class="edit">Edit</button>
+							</div>
+							<hr class="hr">
+							<div class="personal-info_wrapper">
+								<div class="name">
+									<p class="h-name">Name</p>
+									<p class="dino-name">{{ user.get_full_name|upper}}</p>
+								</div>
+								<div class="D-O-B">
+									<p class="date">Date of Birth</p>
+									<p class="dates">{{ user.useraccount.date_of_birth }}</p>
+								</div>
+								<div class="gender">
+									<p class="gend">Gender</p>
+									<p class="gende">{{ user.useraccount.gender }}</p>
+								</div>
+							</div>
+							<!-- end of personal information -->
+							
+							<div class="account-information_wrapper">
+								<div class="account-information">
+									<p class="acct-header">Account Information</p>
+									<button class="password"> Change Password</button>
+								</div>
+								<hr class="hr">
+								<p class="email-title">Email</p>
+								<p class="email">{{ user.email }}</p>
+							</div>
+							<div class="contact-detail_wrapper">
+								<div class="contact-detail">
+									<p class="c-details">Contact Details</p>
+									<button class="contact-edit">Edit</button>
+								</div>
+								<hr class="hr">
+								<p class="h-address">Address</p>
+								<p class="addresss">{{ user.useraccount.address.get_full_address }}</p>
+								<p class="location">State</p>
+								<p class="city-location">City</p>
+								<div class="locate">
+									<p class="location-value">{{ user.useraccount.address.lga }}</p>
+									<p class="city-value">{{ user.useraccount.address.state }}</p>
+								</div>
+								<div class="phone-details">
+									<p class="phone-num">Phone No</p>
+									<p class="phone-Numb">{{ user.useraccount.tel }}</p>
+									<button class="phone-verify">Verified</button>
+								</div>
+								<div class="card-details_wrapper">
+									<div class="card-details">
+										<p class="card-header">
+											Card Details [Optional]
+										</p>
+										<button class="edit">Edit</button>
+										<hr class="hr">
+										<p class="card-numb">
+											Card Number
+										</p>
+										<p class="card_number">xxxx xxxx xxxx xx64</p>
+										<div class="expiry">
+											<p class="expire">Expiry Date</p>
+											<p class="cvv">CVV</p>
+										</div>		
+										<div class="digits-wrapper">
+											<p class="expire-date">xx/xx</p>
+											<p class="cvv-numb">xxx</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end of cont and account details -->
+							<div class="current-jobs-wrapper">
+								<div class="current-jobs">
+									<a name="jobs"></a>
+									<h3>Current Jobs</h3>
+									<hr class="hr">
+									<div class="current-job-dets">
+										<h3>Victor Olaye</h3>
+										<p>Plumber</p>
+										<p>Location:42 Montgomery street , Yaba, Lagos</p>
+										<p>Date: 27th April, 2017</p>
+										<p>Time:15:00pm</p>
+										<button class="edit">Job Completed</button>
+										<button type="button" class="edit" data-toggle="modal" data-target="#PopUp">Petition Job</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="current-jobs-wrapper">
+								<div class="current-jobs">
+									<h3>Current Jobs</h3>
+									<hr class="hr">
+									<div class="current-job-dets">
+										<h3>Victor Olaye</h3>
+										<p>Plumber</p>
+										<p>Location:42 Montgomery street , Yaba, Lagos</p>
+										<p>Date: 27th April, 2017</p>
+										<p>Time:15:00pm</p>
+										<button class="edit">Job Completed</button>
+										<button type="button" class="edit" data-toggle="modal" data-target="#PopUp">Petition Job</button>
+									</div>
+								</div>
+							</div> 					
+						</div>
+					</div>
+				</div>
+				<!-- end of details column -->
+				<div class="container">
+					<div class="modal fade" id="PopUp">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>Hi Adebola,</h3>
+								</div>
+								<div class="modal-body">
+									<p>We are sorry your job was not completed as liked and would send someone over to inspect the job. Upon inspection if your claim is valid the artisan will be sent to redo the job at no charge or a refund will be issued based on your preferences.
+									</p>
+									<div class="date-select">
+										<p class="date-of-ins">Date of Inspection</p>
+										<input type="date" name="date" id="inputDate" class="form-control" value="" required="required" title="Date">
+									</div>
+									<div class="time-select">
+										<p class="time-of-ins">Time of inspection</p>
+										<input type="time" name="time" id="inputTime" class="form-control" value="" required="required" title="Time">
+									</div>
+									<div class="inspect-button">
+										<button type="button" class="book-inspect">Book Inspection</button>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock body %}
